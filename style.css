@@ -1,0 +1,143 @@
+body {
+    background: url("img/background/background.jpg") !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.container {
+    float: left;
+    margin-top: 10px;
+}
+
+#text {
+    color: white;
+}
+
+#atomimg {
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+.infolar {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    right: 240px;
+    margin-top: 50px;
+}
+
+.text {
+    color:white !important;
+}
+
+.element {
+    border: 1px solid black;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.soygaz {
+    background-color: lightblue;
+}
+
+.yarimetal {
+    background-color: rgb(196,196, 145);
+}
+
+.ametal {
+    background-color: rgb(150, 254, 155);
+}
+
+.alkalimetal {
+    background-color: rgb(254, 92, 94);
+}
+
+.toprakalkali {
+    background-color: rgb(255, 216, 166);
+}
+
+.gecis {
+    background-color: rgb(254, 184, 184);
+}
+
+.metal {
+    background-color: grey;
+}
+
+.halojen {
+    background-color: rgb(255, 255, 150);
+}
+
+.lantanit {
+    background-color: rgb(254, 184, 252);
+}
+
+.aktinit {
+    background-color: rgb(254, 142, 194);
+}
+
+.info {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.infometal {
+    background-color: lightblue;
+    
+}
+
+.infoyarimetal {
+    background-color: rgb(180,224, 150);
+}
+
+.infoametal {
+    background-color: #f55656;
+}
+
+.infolantanit {
+    background-color: rgb(254, 184, 252);
+}
+
+.infoaktinit {
+    background-color: rgb(254, 142, 194);
+}
+
+.infoalkali {
+    background-color: rgb(254, 92, 94);
+}
+
+.infotoprak {
+    background-color: rgb(255, 216, 166);
+}
+
+.infogecis {
+    background-color: rgb(254, 184, 184);
+}
+
+.infohalojen {
+    background-color: rgb(255, 255, 150);
+}
+
+.infosoygaz {
+    background-color: lightblue;
+}
+
+@media screen and (max-width: 1200px) {
+    .hide-scrollbar-sm {
+       overflow-x: hidden;
+    }
+ }
+
+ 

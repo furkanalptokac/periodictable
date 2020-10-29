@@ -1,0 +1,19 @@
+{
+  "name": "periodictable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-reloader": "^1.0.1"
+  },
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
+}
