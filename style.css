@@ -34,6 +34,14 @@ body {
     right: 240px;
     margin-top: 50px;
 }
+.input{
+    position: fixed;
+    bottom: 15%;
+    right: 50%;
+}
+.inputG {
+    margin-top:135px;
+}
 
 .text {
     color:white !important;
