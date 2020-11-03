@@ -5,6 +5,27 @@ const db = low(adapter);
 
 const path = './media/img/elements/';
 const ext = '.gif'
+function getir(input) {
+    var inputdeger = Number(input.value);
+  
+    var atomno = document.getElementById("atomno");
+    var adi = document.getElementById("adi");
+    var simge = document.getElementById("simge");
+    var dizilis = document.getElementById("dizilis");
+    var bagtipi = document.getElementById("bagtipi");
+    var sene = document.getElementById("sene");
+    var atomimg = document.getElementById("atomimg");
+  
+    atom = db.find({ atomicNumber: inputdeger }).value();
+    atomno.innerHTML = atom.atomicNumber;
+    adi.innerHTML = atom.name;
+    simge.innerHTML = atom.symbol;
+    dizilis.innerHTML = atom.electronicConfiguration;
+    bagtipi.innerHTML = atom.bondingType;
+    sene.innerHTML = atom.yearDiscovered;
+    atomimg.src = `${path}${inputdeger}${ext}`;
+  }
+  
 
 function pressed (btn) {
     var atomno = document.getElementById('atomno');
