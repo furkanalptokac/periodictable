@@ -1,18 +1,36 @@
 body {
-    background: url("media/img/background/background.jpg") !important;
+    background: url("../../media/img/background/background.jpg") !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.hidden {
-    visibility: hidden;
-}
-
 .container {
+    width: 100%;
+    min-width: 600px;
     float: left;
     margin-top: 10px;
+}
+
+.container > div > div {
+    width: 5.5%;
+    display: inline-block;
+}
+
+.element {
+    border: 1px solid black;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 #text {
@@ -45,14 +63,6 @@ body {
 
 .text {
     color:white !important;
-}
-
-.element {
-    border: 1px solid black;
-    margin: 0px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
 }
 
 .soygaz {
@@ -101,51 +111,8 @@ body {
     margin-right: 5px;
 }
 
-.infometal {
-    background-color: lightblue;
-    
-}
-
-.infoyarimetal {
-    background-color: rgb(180,224, 150);
-}
-
-.infoametal {
-    background-color: #f55656;
-}
-
-.infolantanit {
-    background-color: rgb(254, 184, 252);
-}
-
-.infoaktinit {
-    background-color: rgb(254, 142, 194);
-}
-
-.infoalkali {
-    background-color: rgb(254, 92, 94);
-}
-
-.infotoprak {
-    background-color: rgb(255, 216, 166);
-}
-
-.infogecis {
-    background-color: rgb(254, 184, 184);
-}
-
-.infohalojen {
-    background-color: rgb(255, 255, 150);
-}
-
-.infosoygaz {
-    background-color: lightblue;
-}
-
 @media screen and (max-width: 1200px) {
     .hide-scrollbar-sm {
-       overflow-x: hidden;
+        overflow-x: hidden;
     }
- }
-
- 
+}

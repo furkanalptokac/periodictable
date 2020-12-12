@@ -7,7 +7,7 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
-    resizable: false
+    resizable: true
   })
 
   win.loadFile('index.html')

@@ -5,6 +5,7 @@ const db = low(adapter);
 
 const path = './media/img/elements/';
 const ext = '.gif'
+
 function getir(input) {
     var inputdeger = Number(input.value);
   
@@ -24,8 +25,7 @@ function getir(input) {
     bagtipi.innerHTML = atom.bondingType;
     sene.innerHTML = atom.yearDiscovered;
     atomimg.src = `${path}${inputdeger}${ext}`;
-  }
-  
+}  
 
 function pressed (btn) {
     var atomno = document.getElementById('atomno');

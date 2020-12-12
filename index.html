@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Periyodik Tablo</title>
     <meta http-equiv="Content-Security-Policy" content="script-src https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/stylesheets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -192,39 +192,67 @@
         <div class="row">
             <div class="col-*-* element hidden"></div>
             <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info metal"></div> <span id="text">Metal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infometal"></div> <span id="text">Metal</span>
             <div class="col-*-* element hidden"></div>
             <div class="col-*-* info yarimetal"></div> <span id="text">Yarı metal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infoametal"></div> <span id="text">Ametal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infolantanit"></div> <span id="text">Lantanit</span>
+            <div class="col-*-* info ametal"></div> <span id="text">Ametal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infoaktinit"></div> <span id="text">Aktinit</span>
+            <div class="col-*-* element hidden"></div>
         </div>
         <div class="row">
             <div class="col-*-* element hidden"></div>
             <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info gecis"></div> <span id="text">Geçiş metalleri</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infoalkali"></div> <span id="text">Alkali metal</span>
+            <div class="col-*-* info alkalimetal"></div> <span id="text">Alkali metal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infotoprak"></div> <span id="text">Toprak alkali metal</span>
             <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infogecis"></div> <span id="text">Geçiş metalleri</span>
-            <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infohalojen"></div> <span id="text">Halojen</span>
-            <div class="col-*-* element hidden"></div>
-            <div class="col-*-* info infosoygaz"></div> <span id="text">Soygaz</span>
-        </div><br>
+            <div class="col-*-* info toprakalkali"></div> <span id="text">Toprak alkali metal</span>
 
-        <img id="atomimg">
-        <video width="320" controls>
-            <source src="./media/video/periodic.mp4" type="video/mp4">
-        </video>
-        <video width="320" controls>
-            <source src="./media/video/periodic2.mp4" type="video/mp4">
-        </video>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+        </div>
+        <div class="row">
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info lantanit"></div> <span id="text">Lantanit</span>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info aktinit"></div> <span id="text">Aktinit</span>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info halojen"></div> <span id="text">Halojen</span>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+        </div>
+        <div class="row">
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* info soygaz"></div> <span id="text">Soygaz</span>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+            <div class="col-*-* element hidden"></div>
+        </div><br>
+        <div class="videocontainer">
+            <button id="videobutton" onclick="$('#infovideo').show(), $('#infovideo2').show()">Videoları Göster</button>
+            <button id="videobutton2" onclick="$('#infovideo').hide(), $('#infovideo2').hide()">Videoları Gizle</button><br>
+            <img id="atomimg">
+            <video width="320" controls id="infovideo">
+                <source src="./media/video/periodic.mp4" type="video/mp4">
+            </video>
+            <video width="320" controls id="infovideo2">
+                <source src="./media/video/periodic2.mp4" type="video/mp4">
+            </video>
+        </div>
+        
         <div class="infolar">
             <span class="text">Atom Numarası: </span><span class="text" id="atomno"></span><br>
             <span class="text">Adı: </span><span class="text" id="adi"></span><br>
@@ -240,5 +268,13 @@
     </div>
     <br><br>
 </body>
-<script src="functions.js"></script>
+<script src="controllers/functions.js"></script>
+<script>
+    window.$ = window.jQuery = require('jquery');
+
+    $('#videobutton').click(function () {
+        $('#infoVideo').hide();
+    });
+</script>
 </html>
+
