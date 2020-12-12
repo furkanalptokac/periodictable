@@ -25,7 +25,7 @@ function getir(input) {
     bagtipi.innerHTML = atom.bondingType;
     sene.innerHTML = atom.yearDiscovered;
     atomimg.src = `${path}${inputdeger}${ext}`;
-}  
+}
 
 function pressed (btn) {
     var atomno = document.getElementById('atomno');
