@@ -7,45 +7,45 @@ const path = './media/img/elements/';
 const ext = '.gif'
 
 function getir(input) {
-    var inputdeger = Number(input.value);
+    let inputdeger = Number(input.value);
   
-    var atomno = document.getElementById("atomno");
-    var adi = document.getElementById("adi");
-    var simge = document.getElementById("simge");
-    var dizilis = document.getElementById("dizilis");
-    var bagtipi = document.getElementById("bagtipi");
-    var sene = document.getElementById("sene");
-    var atomimg = document.getElementById("atomimg");
-  
-    atom = db.find({ atomicNumber: inputdeger }).value();
-    atomno.innerHTML = atom.atomicNumber;
-    adi.innerHTML = atom.name;
-    simge.innerHTML = atom.symbol;
-    dizilis.innerHTML = atom.electronicConfiguration;
-    bagtipi.innerHTML = atom.bondingType;
-    sene.innerHTML = atom.yearDiscovered;
+    let atomno = document.getElementById("atomno");
+    let adi = document.getElementById("adi");
+    let simge = document.getElementById("simge");
+    let dizilis = document.getElementById("dizilis");
+    let bagtipi = document.getElementById("bagtipi");
+    let sene = document.getElementById("sene");
+    let atomimg = document.getElementById("atomimg");
+
+    atom = db.find({ atomNumarasi: inputdeger }).value();
+    atomno.innerHTML = atom.atomNumarasi;
+    adi.innerHTML = atom.adi;
+    simge.innerHTML = atom.sembol;
+    dizilis.innerHTML = atom.elektronDizilisi;
+    bagtipi.innerHTML = atom.bagTipi;
+    sene.innerHTML = atom.kesfedildigiYil;
     atomimg.src = `${path}${inputdeger}${ext}`;
 }
 
 function pressed (btn) {
-    var atomno = document.getElementById('atomno');
-    var adi = document.getElementById('adi');
-    var simge = document.getElementById('simge');
-    var dizilis = document.getElementById('dizilis');
-    var bagtipi = document.getElementById('bagtipi');
-    var sene = document.getElementById('sene');
-    var atomimg = document.getElementById('atomimg');
-    var btnid = parseInt(btn.id);
+    let atomno = document.getElementById('atomno');
+    let adi = document.getElementById('adi');
+    let simge = document.getElementById('simge');
+    let dizilis = document.getElementById('dizilis');
+    let bagtipi = document.getElementById('bagtipi');
+    let sene = document.getElementById('sene');
+    let atomimg = document.getElementById('atomimg');
+    let btnid = parseInt(btn.id);
     
     atom = db
-        .find({ atomicNumber: btnid })
+        .find({ atomNumarasi: btnid })
         .value();
 
-    atomno.innerHTML = atom.atomicNumber;
-    adi.innerHTML = atom.name;
-    simge.innerHTML = atom.symbol;
-    dizilis.innerHTML = atom.electronicConfiguration;
-    bagtipi.innerHTML = atom.bondingType;
-    sene.innerHTML = atom.yearDiscovered;
+    atomno.innerHTML = atom.atomNumarasi;
+    adi.innerHTML = atom.adi;
+    simge.innerHTML = atom.sembol;
+    dizilis.innerHTML = atom.elektronDizilisi;
+    bagtipi.innerHTML = atom.bagTipi;
+    sene.innerHTML = atom.kesfedildigiYil;
     atomimg.src = `${path}${btn.id}${ext}`;
 }
