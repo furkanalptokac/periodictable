@@ -4,7 +4,7 @@
     <title>Periyodik Tablo</title>
     <meta http-equiv="Content-Security-Policy" content="script-src https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="public/stylesheets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -243,14 +243,14 @@
         </div><br>
         
         <div class="videocontainer">
-            <button id="videobutton" onclick="$('#infovideo').show(), $('#infovideo2').show()">Videoları Göster</button>
-            <button id="videobutton2" onclick="$('#infovideo').hide(), $('#infovideo2').hide()">Videoları Gizle</button><br>
+            <button id="videobutton" onclick="goster()">Videoları Göster</button>
+            <button id="videobutton2" onclick="gizle()">Videoları Gizle</button><br>
             <img id="atomimg">
             <video width="320" controls id="infovideo">
-                <source src="./media/video/periodic.mp4" type="video/mp4">
+                <source src="./public/media/video/periodic.mp4" type="video/mp4">
             </video>
             <video width="320" controls id="infovideo2">
-                <source src="./media/video/periodic2.mp4" type="video/mp4">
+                <source src="./public/media/video/periodic2.mp4" type="video/mp4">
             </video>
         </div>
         
@@ -260,11 +260,16 @@
             <span class="text">Simgesi: </span><span class="text" id="simge"></span><br>
             <span class="text">Dizilişi: </span><span class="text" id="dizilis"></span><br>
             <span class="text">Yaptığı bağ tipi: </span><span class="text" id="bagtipi"></span><br>
-            <span class="text">Keşfedildiği sene: </span><span class="text" id="sene"></span><br>
+            <span class="text">Grup: </span><span class="text" id="grup"></span><br>
+            <span class="text">Keşfedildiği Sene: </span><span class="text" id="sene"></span><br>
+            <span class="text">Erime Noktası: </span><span class="text" id="erimenoktasi"></span><br>
+            <span class="text">Kaynama Noktası: </span><span class="text" id="kaynamanoktasi"></span><br>
+            <span class="text">Standart Hali: </span><span class="text" id="standarthali"></span><br>
+
             <div class="inputG">
-            <input id="input" type="number" name="input" min="1" max="118">
-            <button onclick="getir(document.getElementById('input'))" type="submit">Ara</button>
-        </div>
+                <input id="input" type="number" name="input" min="1" max="118">
+                <button onclick="getir(document.getElementById('input'))" type="submit">Ara</button>
+            </div>
         </div>
     </div>
     <br><br>

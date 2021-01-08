@@ -3,49 +3,91 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('data.json');
 const db = low(adapter);
 
-const path = './media/img/elements/';
+const path = './public/media/img/elements/';
 const ext = '.gif'
 
-function getir(input) {
-    let inputdeger = Number(input.value);
+const getir = (input) => {
+    let inputDeger = Number(input.value);
   
-    let atomno = document.getElementById("atomno");
+    let atomNo = document.getElementById("atomno");
     let adi = document.getElementById("adi");
     let simge = document.getElementById("simge");
     let dizilis = document.getElementById("dizilis");
     let bagtipi = document.getElementById("bagtipi");
+    let grup = document.getElementById("grup");
     let sene = document.getElementById("sene");
-    let atomimg = document.getElementById("atomimg");
+    let erimeNoktasi = document.getElementById("erimenoktasi");
+    let kaynamaNoktasi = document.getElementById("kaynamanoktasi");
+    let standartHali = document.getElementById("standarthali");
+    let atomImg = document.getElementById("atomimg");
 
-    atom = db.find({ atomNumarasi: inputdeger }).value();
-    atomno.innerHTML = atom.atomNumarasi;
-    adi.innerHTML = atom.adi;
-    simge.innerHTML = atom.sembol;
-    dizilis.innerHTML = atom.elektronDizilisi;
-    bagtipi.innerHTML = atom.bagTipi;
-    sene.innerHTML = atom.kesfedildigiYil;
-    atomimg.src = `${path}${inputdeger}${ext}`;
-}
-
-function pressed (btn) {
-    let atomno = document.getElementById('atomno');
-    let adi = document.getElementById('adi');
-    let simge = document.getElementById('simge');
-    let dizilis = document.getElementById('dizilis');
-    let bagtipi = document.getElementById('bagtipi');
-    let sene = document.getElementById('sene');
-    let atomimg = document.getElementById('atomimg');
-    let btnid = parseInt(btn.id);
-    
     atom = db
-        .find({ atomNumarasi: btnid })
+        .find({
+            atomNumarasi: inputDeger
+        })
         .value();
 
-    atomno.innerHTML = atom.atomNumarasi;
+    atomNo.innerHTML = atom.atomNumarasi;
     adi.innerHTML = atom.adi;
     simge.innerHTML = atom.sembol;
     dizilis.innerHTML = atom.elektronDizilisi;
     bagtipi.innerHTML = atom.bagTipi;
+    grup.innerHTML = atom.hangiGrup;
     sene.innerHTML = atom.kesfedildigiYil;
-    atomimg.src = `${path}${btn.id}${ext}`;
+    erimeNoktasi.innerHTML = atom.erimeNoktasi;
+    kaynamaNoktasi.innerHTML = atom.kaynamaNoktasi;
+    standartHali.innerHTML = atom.standartHali;
+
+    atomImg.src = `${path}${inputDeger}${ext}`;
+}
+
+const pressed = (btn) => {
+    let atomNo = document.getElementById("atomno");
+    let adi = document.getElementById("adi");
+    let simge = document.getElementById("simge");
+    let dizilis = document.getElementById("dizilis");
+    let bagtipi = document.getElementById("bagtipi");
+    let grup = document.getElementById("grup");
+    let sene = document.getElementById("sene");
+    let erimeNoktasi = document.getElementById("erimenoktasi");
+    let kaynamaNoktasi = document.getElementById("kaynamanoktasi");
+    let standartHali = document.getElementById("standarthali");
+    let atomImg = document.getElementById("atomimg");
+
+    let btnId = parseInt(btn.id);
+
+    atom = db
+        .find({
+            atomNumarasi: btnId
+        })
+        .value();
+
+    atomNo.innerHTML = atom.atomNumarasi;
+    adi.innerHTML = atom.adi;
+    simge.innerHTML = atom.sembol;
+    dizilis.innerHTML = atom.elektronDizilisi;
+    bagtipi.innerHTML = atom.bagTipi;
+    grup.innerHTML = atom.hangiGrup;
+    sene.innerHTML = atom.kesfedildigiYil;
+    erimeNoktasi.innerHTML = atom.erimeNoktasi;
+    kaynamaNoktasi.innerHTML = atom.kaynamaNoktasi;
+    standartHali.innerHTML = atom.standartHali;
+
+    atomImg.src = `${path}${btn.id}${ext}`;
+}
+
+const goster = () => {
+    const video1 = document.getElementById("infovideo");
+    const video2 = document.getElementById("infovideo2");
+
+    video1.style.display = "inline";
+    video2.style.display = "inline";
+}
+
+const gizle = () => {
+    const video1 = document.getElementById("infovideo");
+    const video2 = document.getElementById("infovideo2");
+
+    video1.style.display = "none";
+    video2.style.display = "none";
 }
