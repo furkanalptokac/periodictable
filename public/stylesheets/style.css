@@ -33,24 +33,22 @@ body {
     visibility: hidden;
 }
 
+.video-container {
+    height: 100px; 
+    width: 200px; 
+}
+
 #text {
     color: white;
 }
 
 #atomimg {
-    margin-top: 50px;
-    position: absolute;
-    top: 0;
-    right: 100px;
+    float: left;
 }
 
 .infolar {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 0px;
-    right: 240px;
-    margin-top: 50px;
+    float: left;
+    margin: 20px;
 }
 .input{
     position: fixed;
@@ -115,4 +113,12 @@ body {
     .hide-scrollbar-sm {
         overflow-x: hidden;
     }
+}
+
+#infovideo {
+    display: none;
+}
+
+#infovideo2 {
+    display: none;
 }
