@@ -11,9 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.2.0",
     "electron-reloader": "^1.0.1"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "jquery": "^3.5.1",
     "lowdb": "^1.0.0"
   }

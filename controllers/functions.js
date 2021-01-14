@@ -3,7 +3,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('data.json');
 const db = low(adapter);
 
-const path = './public/media/img/elements/';
+const path = __dirname + '/public/media/img/elements/';
 const ext = '.gif'
 
 const getir = (input) => {
