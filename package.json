@@ -1,23 +1,46 @@
 {
   "name": "periodictable",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Periodic table visualization.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make-mac": "electron-forge make --platform darwin",
+    "make-linux": "electron-forge make --platform linux",
+    "make-windows": "electron-forge make --platform win32",
+    "make-all": "yarn make-mac && yarn make-linux && yarn make-windows",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkanalptokac/periodictable.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Furkan Alp Tokac <furkan@furkanalp.com>",
+  "license": "ISC ",
+  "bugs": {
+    "url": "https://github.com/furkanalptokac/periodictable/issues"
+  },
+  "homepage": "https://github.com/furkanalptokac/periodictable#readme",
   "devDependencies": {
-    "electron": "^10.1.5",
-    "electron-builder": "^22.9.1",
-    "electron-packager": "^15.2.0",
-    "electron-reloader": "^1.0.1"
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "@electron-forge/maker-deb": "^6.0.0-beta.57",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.58",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.58",
+    "@electron-forge/maker-wix": "^6.0.0-beta.57",
+    "@electron-forge/maker-zip": "^6.0.0-beta.57",
+    "electron": "^13.1.3",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "fs": "^0.0.1-security",
-    "jquery": "^3.5.1",
-    "lowdb": "^1.0.0"
+    "jquery": "^3.6.0",
+    "lowdb": "1.0.0"
   }
 }
